@@ -1,4 +1,4 @@
-const { apiEndpoint } = require('./prismic-configuration');
+const { apiEndpoint, accessToken } = require('./prismic-configuration');
 var repo = /([^\/]+)\.prismic\.io/.exec(apiEndpoint);
 
 module.exports = {
@@ -15,7 +15,7 @@ module.exports = {
         repositoryName: repo[1],
         path: '/preview',
         previews: true,
-        //accessToken: '...',
+        accessToken,
         pages: [{
           type: 'Product',
           match: '/products/:uid',
