@@ -1,4 +1,6 @@
+require('dotenv').config();
+
 module.exports = {
-  apiEndpoint: 'https://your-repo-name.prismic.io/graphql',
-  // accessToken: '###########',
+  apiEndpoint: 'https://prismic-gatsby-coffee.prismic.io/graphql',
+  accessToken: process.env.TOKEN,
 };
